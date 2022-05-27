@@ -1,5 +1,6 @@
-package org.example;
+package org.amous.automation;
 
+import org.amous.utils.WebDriverWaitUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,14 +24,7 @@ public class LoginPage {
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("1234");
         driver.findElement(By.xpath(SING_IN)).click();
-        waitThanClick(driver);
-    }
-
-    //Function Wait and Click
-    private void waitThanClick(ChromeDriver driver) {
-        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(9999999));
-        WebElement element2 = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath(DISPATCH_BOARD_PAGE)));
-        element2.click();
+        WebDriverWaitUtil.waitThanClick(driver, DISPATCH_BOARD_PAGE);
     }
 
 }

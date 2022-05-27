@@ -1,5 +1,7 @@
-package org.example;
+package org.amous;
 
+import org.amous.automation.CreateOrder;
+import org.amous.automation.LoginPage;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
