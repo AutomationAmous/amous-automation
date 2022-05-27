@@ -27,5 +27,4 @@ public class LoginPage {
         WebDriverWaitUtil.waitThanClick(driver, DISPATCH_BOARD_PAGE);
     }
 
-//    test
 }
